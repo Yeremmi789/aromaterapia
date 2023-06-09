@@ -5,6 +5,7 @@ import { GeneralComponent } from './pages/productos/general/general.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '../app-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { RecetasymezclasComponent } from './recetasymezclas/recetasymezclas.component';
 
 
 
@@ -12,7 +13,8 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [
     DetallesComponent,
-    GeneralComponent
+    GeneralComponent,
+    RecetasymezclasComponent
   ],
   imports: [
     CommonModule,

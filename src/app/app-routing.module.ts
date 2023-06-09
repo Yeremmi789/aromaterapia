@@ -2,6 +2,7 @@ import { NgModule, Component} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GeneralComponent } from './modulos/pages/productos/general/general.component';
 import { DetallesComponent } from './modulos/pages/productos/detalles/detalles.component';
+import { RecetasymezclasComponent } from './modulos/recetasymezclas/recetasymezclas.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
     path: 'productos',
     component: DetallesComponent,
   },
+  {
+    path: 'recetario',
+    component: RecetasymezclasComponent
+  }
 ];
 
 @NgModule({
