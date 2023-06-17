@@ -6,13 +6,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '../app-routing.module';
 import { SharedModule } from '../shared/shared.module';
 
+import { HomeComponent } from './home/home.component';
+
+import { LoginComponent } from './login/login.component';
+
 
 
 
 @NgModule({
   declarations: [
     DetallesComponent,
-    GeneralComponent
+    GeneralComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
