@@ -7,12 +7,8 @@ import { HomeComponent } from './modulos/home/home.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: GeneralComponent,
     pathMatch: 'full',
-  },
-  {
-    path: 'catalogo',
-    component: GeneralComponent
   },
   {
     path: 'productos',
