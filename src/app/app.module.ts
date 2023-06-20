@@ -8,6 +8,9 @@ import { DetallesComponent } from './modulos/pages/productos/detalles/detalles.c
 import { ModulosModule } from './modulos/modulos.module';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from './shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,11 @@ import { SharedModule } from './shared/shared.module';
     ModulosModule,
     SharedModule,
     RouterModule.forRoot([]),
+    HttpClientModule,
+    RouterModule,
+    FormsModule,
+    CommonModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
