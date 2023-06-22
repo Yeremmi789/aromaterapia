@@ -6,6 +6,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '../app-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -20,7 +22,13 @@ import { LoginComponent } from './login/login.component';
     CommonModule,
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    FormsModule,
+
+    // Si la página no carga - se queda en blanco, es poque este modulo http está ausente
+    HttpClientModule
+    // Si la página no carga - se queda en blanco, es poque este modulo http está ausente
   ],
   exports:[
     
