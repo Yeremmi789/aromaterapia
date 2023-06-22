@@ -1,27 +1,84 @@
 <app-nav></app-nav>
 <body>
-    <div class="product-details">
-        <img class="product-image" src="assets/img/img1.jpeg" alt="Producto 1">
-        <h2 class="product-title">Producto 1</h2>
-        <p class="product-description">Descripción del producto 1.</p>
-        <p class="product-price">$19.99</p>
-        <a href="#" class="product-link">Agregar al carrito</a>
+    <header>
+        <h1>Catálogo de Aromaterapia</h1>
+    </header>
+
+
+    <div class="product-details" *ngIf="datos">
+        <div class="cont-hijo">
+            <div class="product-images">
+                <img src="{{img_url}}{{datos.img}}" alt="Producto 1">
+                <!-- <img src="assets/img/img1.jpeg" alt="Producto 1"> -->
+            </div>
+            <div class="product-info">
+                <div class="titulo">
+                    <!-- <h2 class="product-title">Nombre del Producto</h2> -->
+                    <h2 class="product-title">{{datos.nombre}}</h2>
+                </div>
+                <div class="calificacion">
+                    <h2 class="tamanio">⭐️⭐️⭐️⭐️⭐️</h2>
+                    <label for="">15 calificaciones</label>
+                </div>
+                <p class="product-description">{{datos.descripcion}}</p>
+                <p class="product-price">{{datos.precio}} MXN</p>
+                <div class="product-features">
+                    <div class="titulo">
+                        <h3>Características</h3>
+                    </div>
+                    <ul>
+                        <li>Característica 1</li>
+                        <li>Característica 2</li>
+                        <li>Característica 3</li>
+                    </ul>
+                </div>
+                <div id="btn">
+                    <button id="btn-verde">Comprar</button>
+                    <button id="btn-azul">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cont-padre">
+        <div class="contenedor">
+            <hr>
+            <div class="product-reviews">
+                <h3>Comentarios</h3>
+                <div class="review">
+                    <div class="review-header">
+                        <p class="review-user">Usuario 1</p>
+                        <p class="review-rating">⭐️⭐️⭐️⭐️⭐️</p>
+                    </div>
+                    <p class="review-text">Excelente producto. Muy satisfecho.</p>
+                    <div class="review-feedback">
+                        <button id="btn-verde" class="like-button">Me gusta</button>
+                        <button id="btn-rojo" class="dislike-button">No me gusta</button>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review-header">
+                        <p class="review-user">Usuario 2</p>
+                        <p class="review-rating">⭐️⭐️⭐️</p>
+                    </div>
+                    <p class="review-text">Buen producto, pero podría mejorar en...</p>
+                    <div class="review-feedback">
+                        <button id="btn-verde" class="like-button">Me gusta</button>
+                        <button id="btn-rojo" class="dislike-button">No me gusta</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="product-reviews">
+                <h4>Comenta que te pareció el producto</h4>
+                <div class="review">
+                    <div class="review-header">
+                        <textarea name="" id="cont-textarea" >Escribe algo :D</textarea>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
 <app-footer></app-footer>
-
-
-<!-- <body>
-    <div class="product-details">
-        <div class="product-image">
-            <img src="assets/img/img1.jpeg" alt="Producto 1">
-        </div>
-        <div class="product-info">
-            <h2 class="product-title">Producto 1</h2>
-            <p class="product-description">Descripción del producto 1.</p>
-            <p class="product-price">$19.99</p>
-            <button class="product-button">Añadir al carrito</button>
-        </div>
-    </div>
-</body> -->
