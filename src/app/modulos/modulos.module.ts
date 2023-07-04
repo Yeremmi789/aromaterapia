@@ -9,7 +9,8 @@ import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home/home.component';
 
 import { LoginComponent } from './login/login.component';
-import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -26,7 +27,9 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    // RouterModule.forRoot([]),
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
   ],
   exports:[
     
