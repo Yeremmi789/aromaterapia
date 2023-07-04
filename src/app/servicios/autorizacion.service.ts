@@ -41,7 +41,7 @@ export class AutorizacionService {
               name: respuesta.name!,
               id: respuesta.id!,
             }
-            // localStorage.setItem('user', JSON.stringify(respuesta));
+            localStorage.setItem('user', JSON.stringify(respuesta));
           }
         }),
         map(resp => resp.ok),
