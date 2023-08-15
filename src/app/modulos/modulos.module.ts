@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EnviarInfoComponent } from './pages/productos/enviar-info/enviar-info.component';
 
 
 
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     DetallesComponent,
     GeneralComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    EnviarInfoComponent
   ],
   imports: [
     CommonModule,
@@ -30,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+
   ],
   exports:[
     

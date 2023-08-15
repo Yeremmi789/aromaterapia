@@ -4,6 +4,7 @@ import { GeneralComponent } from './modulos/pages/productos/general/general.comp
 import { DetallesComponent } from './modulos/pages/productos/detalles/detalles.component';
 import { HomeComponent } from './modulos/home/home.component';
 import { LoginComponent } from './modulos/login/login.component';
+import { EnviarInfoComponent } from './modulos/pages/productos/enviar-info/enviar-info.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'catalogo',
     component: GeneralComponent
+  },
+  {
+    path: 'prueba',
+    component: EnviarInfoComponent
   }
 ];
 
