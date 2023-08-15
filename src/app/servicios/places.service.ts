@@ -3,6 +3,8 @@ import { Firestore, addDoc, collection , collectionData, doc, deleteDoc, setDoc}
 import { informacion } from '../s-modelos/ArchivosFire';
 import { Observable } from 'rxjs';
 
+declare var gtag: any;
+
 @Injectable({
   providedIn: 'root'
 })
@@ -41,5 +43,10 @@ export class PlacesService {
     return setDoc(placeDocRef, inf, { merge: true }); // Utilizamos merge: true para actualizar solo los campos modificados
   }
 
+
+  trackPageView(pageName: string): void {
+    gtag('event', 'page_view', { 'event_category': 'Page', 'event_label': pageName });
+  }
+  
 
 }
