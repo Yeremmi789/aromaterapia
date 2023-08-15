@@ -21,27 +21,28 @@
             <li *ngFor="let info of datos" class="record-item">
                 <div class="record-details">
                     <h3 class="record-title">{{info.nombre}}</h3>
-                    <p class="record-description">{{info.descripcion}}</p>
+                    <p class="record-description">Descripción: {{info.descripcion}}</p>
+                    <p class="record-description">ID: {{info.id}}</p>
                 </div>
                 <div class="record-actions">
-                    <button class="btn-edit">Editar</button>
-                    <button class="btn-delete">Eliminar</button>
+                    <button class="btn-delete" (click)="obtInfo(info)">Editar</button>
+                    <!-- <button class="btn-delete" >Editar</button> -->
+                    <!-- <button class="btn-delete"  (click)="deleteItem(info.id)" >Eliminar</button> -->
+                    <!--- Aqui NO se debe poner el info.id, porque al parecer firebase necesita obtener toda la información para poder eliminar-->
+                    <button class="btn-delete" (click)="deleteItem(info)">Eliminar</button>
                 </div>
             </li>
-
-            
-            <!-- <li class="record-item">
-                <div class="record-details">
-                    <h3 class="record-title">Registro 2</h3>
-                    <p class="record-description">Descripción del Registro 2</p>
-                </div>
-                <div class="record-actions">
-                    <button class="btn-edit">Editar</button>
-                    <button class="btn-delete">Eliminar</button>
-                </div>
-            </li> -->
-            <!-- Agrega más elementos de la lista según tus necesidades -->
         </ul>
     </div>
+
+
+    <!-- Mostrar un formulario para editar los datos -->
+    <form (ngSubmit)="updatePlace()" #updateForm="ngForm">
+        <label for="nombre">Nuevo Nombre:</label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="newPlaceData.nombre" required>
+        <label for="descripcion">Nueva Descripción:</label>
+        <input type="text" id="descripcion" name="descripcion" [(ngModel)]="newPlaceData.descripcion" required>
+        <button type="submit">Actualizar</button>
+    </form>
 
 </body>

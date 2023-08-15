@@ -10,6 +10,7 @@ export class FirebaseService {
 
   constructor(private http:HttpClient) { }
 
+  // private urlFirebase = "https://websv1-7102d-default-rtdb.firebaseio.com/datos.json";
   private urlFirebase = "https://websv1-7102d-default-rtdb.firebaseio.com/datos.json";
   guardarInformacion(archivos:informacion):Observable<any>{
 
