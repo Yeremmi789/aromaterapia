@@ -5,6 +5,7 @@ import { DetallesComponent } from './modulos/pages/productos/detalles/detalles.c
 import { HomeComponent } from './modulos/home/home.component';
 import { LoginComponent } from './modulos/login/login.component';
 import { EnviarInfoComponent } from './modulos/pages/productos/enviar-info/enviar-info.component';
+import { CodigosComponent } from './modulos/pages/codigos/codigos.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'prueba',
     component: EnviarInfoComponent
+  },
+  {
+    path: 'codigo',
+    component: CodigosComponent
   }
 ];
 

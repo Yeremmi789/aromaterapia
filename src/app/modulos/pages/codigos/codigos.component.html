@@ -1,0 +1,22 @@
+<p>codigos works!</p>
+
+
+<div *ngIf="qrCodeUrl">
+    <img [src]="qrCodeUrl" alt="Código QR">
+</div>
+
+
+
+<div>
+    <label for="qrContent">Contenido:</label>
+    <input type="text" id="qrContent" [(ngModel)]="qrContent" />
+</div>
+<div>
+    <label for="qrSize">Tamaño:</label>
+    <input type="text" id="qrSize" [(ngModel)]="qrSize" />
+</div>
+<button (click)="generateQRCode()">Generar Código QR</button>
+
+<div *ngIf="qrCodeUrl">
+    <img [src]="qrCodeUrl" alt="Código QR">
+</div>

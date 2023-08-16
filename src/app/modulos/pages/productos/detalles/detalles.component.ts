@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductosService } from 'src/app/servicios/productos.service';
-
+declare const FB: any;
 @Component({
   selector: 'app-detalles',
   templateUrl: './detalles.component.html',
@@ -39,6 +39,28 @@ export class DetallesComponent implements OnInit{
       console.log("HOLAaaaaaaaaaaaaaaaa")
       console.log(this.usuarioId)
     });
+
+
+
+    
+
+
+  }
+
+  // Función para compartir en Facebook
+  compartirEnFacebook() {
+    const productId = this.datos.id; // Supongo que `this.datos` contiene la información del producto
+    const baseUrl = 'http://localhost:4200'; // Reemplaza esto con la URL base de tu aplicación
+    // const url = `${baseUrl}/productos/${productId}`; // Construye la URL completa con el ID del producto
+    const url = "https://www.youtube.com/watch?v=J0Xtp51sV40"; // Construye la URL completa con el ID del producto
+    FB.ui({
+      method: 'share',
+      href: url,
+    }, function (response: any) {
+      // Callback después de compartir (opcional)
+    });
+
+    console.log(url)
   }
 
 
